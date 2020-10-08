@@ -12,8 +12,15 @@
  * @author vedrenne.alexis
  */
 class Traitement {
-    public static function instanciationUnEmploye():void{
-        $unEmploye=new Employe(1,"Dupont","Jacques", new DateTime("1980/07/12"),1000.00);
+
+    public static function instanciationUnEmploye(): void {
+        $unEmploye = new Employe(1, "Dupont", "Jacques", new DateTime("1980/07/12"), 1000.00);
         echo $unEmploye;
     }
+
+    public static function instanciarionUnEmployeErreur(): void {
+        $unEmploye = new Employe(1, "Dupont", "Jacques", new DateTime("1980/07/12"), 800.00);
+        echo $unEmploye;
+    }
+
 }
