@@ -40,4 +40,9 @@ Class Employe {
         $this->salaireM = $salaireM;
     }
 
+    public function __toString(): string {
+        return $this->numero . " - " . $this->getNom() . " - " . $this->getPrenom() . " - " .$this->getDateDeNaissance()->format('d/m/Y') . " - "
+                .$this->getSalaireM();
+    }
+
 }
