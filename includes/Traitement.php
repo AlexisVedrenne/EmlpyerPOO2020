@@ -18,9 +18,14 @@ class Traitement {
         echo $unEmploye;
     }
 
-    public static function instanciarionUnEmployeErreur(): void {
+    public static function instanciationUnEmployeErreur(): void {
         $unEmploye = new Employe(1, "Dupont", "Jacques", new DateTime("1980/07/12"), 800.00);
         echo $unEmploye;
+    }
+
+    public static function instanciationProjetV1(): void {
+        $unProjet = new Projet('PR7', 'Librairie Gelistout', 102);
+        echo $unProjet;
     }
 
 }

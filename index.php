@@ -8,12 +8,11 @@
 
 include './Classes/Employe.php';
 include './includes/Traitement.php';
-
+include './Classes/Projet.php';
 try {
     Traitement::instanciationUnEmploye();
     echo '<br>';
-    Traitement::instanciarionUnEmployeErreur();
-    Traitement::instanciationUnEmploye();
+    Traitement::instanciationProjetV1();
 } catch (Exception $ex) {
     echo $ex->getMessage();
 }
