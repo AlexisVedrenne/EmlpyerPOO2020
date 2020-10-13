@@ -47,7 +47,7 @@ Class Employe {
     }
 
     public function __toString(): string {
-        return $this->numero . " - " . $this->getNom() . " - " . $this->getPrenom() . " - " . $this->getDateDeNaissance()->format('d/m/Y') . " - "
+        return (string)$this->numero . " - " . $this->getNom() . " - " . $this->getPrenom() . " - " . $this->getDateDeNaissance()->format('d/m/Y') . " - "
                 . $this->getSalaireM();
     }
 

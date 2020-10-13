@@ -9,10 +9,13 @@
 include './Classes/Employe.php';
 include './includes/Traitement.php';
 include './Classes/Projet.php';
+include './Classes/EmployeInformaticien.php';
 try {
     Traitement::instanciationUnEmploye();
     echo '<br>';
     Traitement::instanciationProjetV1();
+    echo '<br>';
+    Traitement::instanciationImformaticien();
 } catch (Exception $ex) {
     echo $ex->getMessage();
 }

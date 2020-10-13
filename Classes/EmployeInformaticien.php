@@ -12,20 +12,28 @@
  * @author vedrenne.alexis
  */
 class EmployeInformaticien extends Employe {
+
     private int $primeM;
-    
-    public function __construct(int $num, string $pNom, string $pPrenom, DateTime $pddn, float $pSalaire,Projet $unProjet) {
+    private Projet $projet;
+
+    public function __construct(int $num, string $pNom, string $pPrenom, DateTime $pddn, float $pSalaire, Projet $unProjet) {
         parent::__construct($num, $pNom, $pPrenom, $pddn, $pSalaire);
-        $this->primeM= 0;
+        $this->primeM = 0;
+        $this->projet = $unProjet;
     }
+
     function setPrimeM(int $primeM): void {
-        if(!(($this->getPrimeM()/parent::getSalaireM())*30)>parent::getSalaireM()){
-            $this->primeM=$primeM;
+        if (!(($this->getPrimeM() / parent::getSalaireM()) * 30) > parent::getSalaireM()) {
+            $this->primeM = $primeM;
         }
     }
+
     function getPrimeM(): int {
         return $this->primeM;
     }
 
+    public function __toString(): string {
+        return "Informaticien: " . parent::__toString() . "<br>" . $this->projet->__toString();
+        }
 
 }

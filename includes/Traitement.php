@@ -28,4 +28,9 @@ class Traitement {
         echo $unProjet;
     }
 
+    public static function instanciationImformaticien(): void {
+        $informaticien=new EmployeInformaticien(2,"Dimont","Patrik",new DateTime("1980/07/12"),1200,new Projet('PR7', 'Librairie Gelistout', 102));
+        echo $informaticien;
+    }
+
 }
