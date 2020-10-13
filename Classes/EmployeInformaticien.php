@@ -23,7 +23,7 @@ class EmployeInformaticien extends Employe {
     }
 
     function setPrimeM(int $primeM): void {
-        if (!(($this->getPrimeM() / parent::getSalaireM()) * 30) > parent::getSalaireM()) {
+        if ($primeM < (0.3 * parent::getSalaireM())) {
             $this->primeM = $primeM;
         }
     }
@@ -33,7 +33,11 @@ class EmployeInformaticien extends Employe {
     }
 
     public function __toString(): string {
-        return "Informaticien: " . parent::__toString() . "<br>" . $this->projet->__toString();
-        }
+        return "Informaticien: " . parent::__toString() . "<br>" . $this->projet->__toString() . "<br>" . "- Gaint annuel :" . $this->gaintAnnuel();
+    }
+
+    public function gaintAnnuel(): float {
+        return (parent::getSalaireM() + $this->getPrimeM()) * 12;
+    }
 
 }
