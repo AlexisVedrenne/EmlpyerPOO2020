@@ -1,4 +1,4 @@
-<?php
+<?php namespace APP;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,6 +11,7 @@ include './includes/Traitement.php';
 include './Classes/Projet.php';
 include './Classes/EmployeInformaticien.php';
 include './Classes/EmployeNonInFormation.php';
+require './vendor/autoload.php';
 try {
 
     Traitement::instanciationProjetV1();

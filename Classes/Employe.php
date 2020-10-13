@@ -1,4 +1,4 @@
-<?php
+<?php namespace  ClassesMetier\DRH;
 
 abstract Class Employe {
 
